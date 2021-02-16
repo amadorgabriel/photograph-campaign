@@ -2,11 +2,15 @@
   <img align="center" width="110px" src="https://i.pinimg.com/originals/5e/c6/4e/5ec64e7fb1171180d55187326e300a77.png" />
 </p>
 
+<p align="center" >
+    Campanha realizada com dedicação e muita inovação!
+</p>
+
 
 <p align="center" >
-  <img align="center" src="https://img.shields.io/github/license/amador2014/Photograph-Campaign" />
-  <img align="center" src="https://img.shields.io/github/languages/top/amador2014/Photograph-Campaign" />
   <img align="center" src="https://img.shields.io/github/last-commit/amador2014/Photograph-Campaign">
+  <img align="center" src="https://img.shields.io/github/languages/top/amador2014/Photograph-Campaign" />
+  <img align="center" src="https://img.shields.io/github/license/amador2014/Photograph-Campaign" />
 </p>
 
 <p align="center" >
@@ -20,23 +24,29 @@
 </p>
 
 
+---
+
 <div id="tabela-de-conteudo" />
 
 ## :point_right: Tabela de Conteúdos 
 - [Tabela de Conteúdos](#tabela-de-conteudo)
 - [Tecnologias](#tech)
-- [Pre Requisitos](#pre-requisitos)
+- [Pré Requisitos](#pre-requisitos)
 - [Clone o Projeto](#clonando)
 - [Rodando o App Web](#run-web)
 - [Acesse o Código Fonte](#gitpod)
 - [Licença](#licenca)
 
 
+---
+
 <div id="sobre" />
 
 ## :pushpin: Sobre
 Site desenvolvido para campanha **#18AnosSenaiInfo**, uma forma de homenagear a instituição expondo cada grupo de profissionais, cursos, estruturas emuito mais.
 
+
+---
 <div id="tech" />
 
 ## :rocket: Tecnologias
@@ -49,13 +59,14 @@ Site desenvolvido para campanha **#18AnosSenaiInfo**, uma forma de homenagear a 
 
 
 
-
+---
 <div id="pre-requisitos" />
 
 ## 📦️ Pré-Requisitos
 Antes de começar você vai precisar ter instalado na sua máquina a ferramenta [Git](https://git-scm.com/downloads). 
 
 
+---
 
 <div id="clonando" />
 
@@ -64,6 +75,8 @@ Antes de começar você vai precisar ter instalado na sua máquina a ferramenta 
   # Clonando
   ❯ git clone https://github.com/amador2014/Photograph-Campaign.git
  ```
+
+---
 
 <div id="run-web" />
 
@@ -94,12 +107,16 @@ Antes de começar você vai precisar ter instalado na sua máquina a ferramenta 
 
 <div id="gitpod" />
 
+
+---
+
 ## Código Fonte
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/amador2014/Photograph-Campaign/)
 
 > **Dica:** Ou então acesse a url https://github1s.com/amador2014/Photograph-Campaign
 
 
+---
 
 <div id="licenca" />
 
