@@ -1,0 +1,112 @@
+
+#galeria {
+  background-image: url(../assets/images/bg/gallery-bg.png);
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: var(--background-black);
+}
+#galeria .main-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  height: 336px;
+  transform: rotate(270deg);
+  position: absolute;
+  left: -8em;
+}
+#galeria svg {
+  height: 164px;
+  width: 680px;
+}
+#galeria .main-title .stroke-text {
+  font-family: Archivo;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 140px;
+  text-anchor: center;
+  stroke-width: 3px;
+  fill: none;
+  stroke: url(#MyGradient);
+}
+#galeria .main-title .fill-stroke-text {
+  font-family: Archivo;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 140px;
+  text-anchor: center;
+  stroke-width: 3px;
+  stroke-width: 2px;
+  stroke: url(#MyGradient);
+  fill: url(#MyGradient);
+}
+.camera-retro {
+  width: 315.38px;
+  height: 275.5px;
+  margin-right: -4em;
+  margin-top: 4em;
+  transform: rotate(90deg);
+}
+#galeria .main-fotos {
+  display: flex;
+  margin-right: 10em;
+}
+.filme {
+  width: 410px;
+  height: 99.9vh;
+  background: #fafafa;
+  margin: 0 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+.filme img {
+  cursor: zoom-in;
+  width: 320px;
+  margin: 1em;
+  filter: brightness(0.7);
+  transition: 0.2s ease-in;
+  box-shadow: 0 1px 3px rgba(black, 0.2);
+}
+.filme img:hover {
+  filter: brightness(1);
+  width: 330px;
+}
+.filme::-webkit-scrollbar {
+  width: 0;
+}
+.filme:first-child {
+  transform: matrix(1, 0.03, -0.03, 1, 0, 0);
+}
+.filme:last-child {
+  transform: matrix(1, -0.01, 0.01, 1, 0, 0);
+  transform: rotate(180deg);
+}
+.filme:last-child img {
+  transform: rotate(180deg);
+}
+#making {
+  background-image: url(../assets/images/bg/making-of-bg.png);
+  background-position-x: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: var(--background-black);
+}
+#making .popup {
+  margin-right: 9em;
+}
+#making .topbar {
+  background: linear-gradient(180deg, #8257e6 0, #ba01ea 100%);
+}
