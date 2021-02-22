@@ -22,7 +22,10 @@ const Home: React.FC = () => {
             <StrokeTextWhite x="0%" y="96%">
               EM
             </StrokeTextWhite>
-            <FillStrokeTextWhite x="2%" y="90%">
+            <FillStrokeTextWhite
+              x="2%"
+              y="90%"
+            >
               EM
             </FillStrokeTextWhite>
           </svg>

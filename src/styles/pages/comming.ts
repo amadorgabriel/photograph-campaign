@@ -1,13 +1,13 @@
 import styled, { keyframes } from 'styled-components'
 
 export const Main = styled.main`
-  display: 'flex';
-  justify-content: 'center';
-  align-items: 'center';
-  flex-direction: 'column';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: ${({ theme }) => theme.default.black};
-  width: '100%';
-  height: '100vh';
+  width: 100%;
+  height: 100vh;
 `
 
 const move = keyframes`
@@ -36,7 +36,7 @@ const textBase = styled.text`
 
 export const FillStrokeText = styled(textBase)`
   stroke: ${({ theme }) => theme.purple.primary};
-  fill: var(--purple-primary);
+  fill: ${({ theme }) => theme.purple.primary};
 `
 
 export const StrokeText = styled(textBase)`
