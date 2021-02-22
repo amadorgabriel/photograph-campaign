@@ -5,7 +5,7 @@ export const Main = styled.main`
   justify-content: 'center';
   align-items: 'center';
   flex-direction: 'column';
-  background-color: #212121;
+  background-color: ${({ theme }) => theme.default.black};
   width: '100%';
   height: '100vh';
 `
@@ -35,20 +35,20 @@ const textBase = styled.text`
 `
 
 export const FillStrokeText = styled(textBase)`
-  stroke: var(--purple-primary);
+  stroke: ${({ theme }) => theme.purple.primary};
   fill: var(--purple-primary);
 `
 
 export const StrokeText = styled(textBase)`
   fill: none;
-  stroke: var(--purple-primary);
+  stroke: ${({ theme }) => theme.purple.primary};
 `
 
 export const FillStrokeTextWhite = styled(FillStrokeText)`
-  stroke: var(--font-primary);
-  fill: var(--font-primary);
+  stroke: ${({ theme }) => theme.default.white};
+  fill: ${({ theme }) => theme.default.white};
 `
 
 export const StrokeTextWhite = styled(StrokeText)`
-  stroke: var(--font-primary);
+  stroke: ${({ theme }) => theme.default.white};
 `
