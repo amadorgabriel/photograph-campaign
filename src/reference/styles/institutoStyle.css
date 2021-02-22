@@ -1,0 +1,138 @@
+#senai {
+  background-image: url(../assets/images/bg/senai-bg.png);
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 106vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#senai .main-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-top: 1em;
+}
+#senai .stroke-text {
+  font-family: Archivo;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 100px;
+  text-anchor: center;
+  stroke-width: 3px;
+  fill: none;
+  stroke: url(#MyGradient);
+}
+.popup {
+  width: 930px;
+  height: 593px;
+  background: #f2f2f2;
+  border-radius: 10px;
+}
+.animation-popup {
+  animation: shakePopup 0.5s linear;
+}
+.video-frame {
+  width: 930px;
+  height: 548px;
+  border-radius: 0 0 10px 10px;
+}
+.topbar {
+  width: 100%;
+  height: 46.33px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(180deg, rgba(239, 0, 57, 0.79) 0, #ef0039 100%);
+  border-radius: 10px 10px 0 0;
+}
+.topbar .options {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 1em;
+}
+.topbar .options div {
+  width: 15px;
+  height: 15px;
+  border-radius: 20px;
+  margin-left: 8px;
+  background-color: #212121;
+  cursor: default;
+}
+.topbar .options div:first-child {
+  background-color: var(--font-primary);
+  transition: 1s ease;
+  cursor: pointer;
+}
+.topbar .options div:first-child:hover {
+  border: 1px solid #000;
+}
+.search-bar {
+  width: 580px;
+  height: 30px;
+  margin-right: 3em;
+  border-radius: 5px;
+  border: 0.75px solid #ccc;
+  background: #f2f2f2;
+}
+#senai .bottom-making {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 3em;
+}
+#senai .bottom-making p {
+  font-family: Archivo;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  color: #b6b6b6;
+  letter-spacing: 0.1em;
+  margin-right: 2em;
+}
+.btn-making {
+  color: #fff;
+  font: 700 14px/60px "Droid Sans", sans-serif;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  padding: 2px 22px ;
+  cursor: pointer;
+}
+
+.btn-making::after,
+.btn-making::before {
+  border: 3px solid #ea0345;
+  
+  content: "";
+  position: absolute;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.btn-making:hover::after{
+  transform: translate(5px, 5px);
+  border-color: #ea0345;
+}
+
+.btn-making:hover::before{
+  transform: translate(-5px, -5px);
+  border-color: #ea0345;
+}
+
+#senai .purple-grid {
+  width: 100%;
+  margin-top: 2em;
+}
