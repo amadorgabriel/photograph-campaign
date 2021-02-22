@@ -1,5 +1,13 @@
 import Head from 'next/head'
 import React from 'react'
+import {
+  Main,
+  MainText,
+  StrokeText,
+  FillStrokeText,
+  FillStrokeTextWhite,
+  StrokeTextWhite,
+} from '../styles/pages/comming'
 
 const Home: React.FC = () => {
   return (
@@ -8,42 +16,27 @@ const Home: React.FC = () => {
         <title>Senai Info</title>
       </Head>
 
-      <main
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          flexDirection: 'column',
-          backgroundColor: '#212121',
-          width: '100%',
-          height: '100vh',
-        }}
-      >
-
-        <div className="main-text">
+      <Main>
+        <MainText>
           <svg version="1.1" width="100%">
-            <text className="stroke-text stroke-text-white" x="0%" y="96%">
+            <StrokeTextWhite x="0%" y="96%">
               EM
-            </text>
-            <text
-              className="fill-stroke-text fill-stroke-text-white"
-              x="2%"
-              y="90%"
-            >
+            </StrokeTextWhite>
+            <FillStrokeTextWhite x="2%" y="90%">
               EM
-            </text>
+            </FillStrokeTextWhite>
           </svg>
 
           <svg version="1.1" width="754px" style={{ marginTop: '1em' }}>
-            <text className="stroke-text" x="0%" y="96%">
+            <StrokeText x="0%" y="96%">
               BREVE...
-            </text>
-            <text className="fill-stroke-text" x="2%" y="90%">
+            </StrokeText>
+            <FillStrokeText x="2%" y="90%">
               BREVE...
-            </text>
+            </FillStrokeText>
           </svg>
-        </div>
-      </main>
+        </MainText>
+      </Main>
     </div>
   )
 }
