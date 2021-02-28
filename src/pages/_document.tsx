@@ -7,6 +7,7 @@ import Document, {
   NextScript,
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+import MetaImage from '../assets/images/og-metaimage.png'
 
 export default class MyDocument extends Document {
   static async getInitialProps(
@@ -50,10 +51,7 @@ export default class MyDocument extends Document {
           />
           <meta property="og:title" content="Campanha 18 anos SENAI" />
           <meta property="og:type" content="website" />
-          <meta
-            property="og:image"
-            content="../../public/img/og-metaimage.png"
-          />
+          <meta property="og:image" content={MetaImage} />
 
           {/* FONTS */}
           <link rel="preconnect" href="https://fonts.gstatic.com" />

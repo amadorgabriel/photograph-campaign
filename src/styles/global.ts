@@ -9,7 +9,6 @@ export default createGlobalStyle`
   }
 
   html{
-    overflow-y: hidden;
     overflow-x: hidden;
   }
 
