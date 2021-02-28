@@ -1,18 +1,22 @@
-import { DefaultTheme } from 'styled-components'
+const colors = {
+    primary: '#8153f1',
+    secondary: '#a88bf0',
+    tertiary: '#ed0140',
+    quartenary: '#ba01ea',
 
-const colors:DefaultTheme = {
-    default: {
-        black: '#212121', //background-black
-        white: '#FFF', //font-primary
-    },
-    purple: {
-        primary: '#8153f1',
-        secondary: '#a88bf0',
-    },
-    pink: {
-        primary: '#ed0140',
-        secondary: '#ba01ea',
-    }
+    black: '#212121', 
+    white: '#FFF', 
+    transparent: 'transparent'
+}
+
+export const themeColors = {
+    primary: colors.primary,
+    secondary: colors.secondary,
+    tertiary: colors.tertiary,
+    quartenary: colors.quartenary,
+
+    white: colors.white,
+    black: colors.black
 }
 
 export default colors;
