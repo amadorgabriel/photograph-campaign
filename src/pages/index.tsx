@@ -19,7 +19,16 @@ const Home: React.FC = () => {
       </Head>
 
       <Main>
-        <OutlinedTitle>Senai</OutlinedTitle>
+        <OutlinedTitle
+          fontSize="small"
+          height="10%"
+          width="950px"
+          strokeColor="primary"
+          x="10%"
+          y="80%"
+        >
+          Hey, Em Breve...
+        </OutlinedTitle>
         {/* <MainText>
           <svg version="1.1" width="100%">
             <StrokeTextWhite x="0%" y="96%">

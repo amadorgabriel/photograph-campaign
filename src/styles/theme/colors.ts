@@ -16,7 +16,13 @@ export const themeColors = {
     quartenary: colors.quartenary,
 
     white: colors.white,
-    black: colors.black
+    black: colors.black,
+
+    title: {
+        primary: colors.primary,
+        secondary: colors.secondary,
+        white: colors.white,
+    }
 }
 
 export default colors;
