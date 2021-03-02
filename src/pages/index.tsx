@@ -9,6 +9,8 @@ import {
   StrokeTextWhite,
 } from '../styles/pages/comming'
 
+import OutlinedTitle from '../components/Title/Outlined'
+
 const Home: React.FC = () => {
   return (
     <div>
@@ -17,7 +19,8 @@ const Home: React.FC = () => {
       </Head>
 
       <Main>
-        <MainText>
+        <OutlinedTitle>Senai</OutlinedTitle>
+        {/* <MainText>
           <svg version="1.1" width="100%">
             <StrokeTextWhite x="0%" y="96%">
               EM
@@ -38,7 +41,7 @@ const Home: React.FC = () => {
               BREVE...
             </FillStrokeText>
           </svg>
-        </MainText>
+        </MainText> */}
       </Main>
     </div>
   )

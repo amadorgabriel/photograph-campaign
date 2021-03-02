@@ -1,10 +1,11 @@
 import styled from 'styled-components'
+import { StyledTitleProps } from '../interface'
 
 export const Title = styled.svg`
   
 `
 
-export const StrokedText = styled.text`
+export const OutlinedText = styled.text<StyledTitleProps>`
   font-family: Archivo;
   font-style: italic;
   font-weight: 700;

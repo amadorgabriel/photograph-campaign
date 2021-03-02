@@ -8,6 +8,7 @@ export interface StyledTitleProps {
     display?: DisplayType
     fontSize?: FontSizeType
     color?: ColorType
+    uppercase?: boolean
 
     hexInitial?: string
     hexFinal?: string
@@ -15,6 +16,6 @@ export interface StyledTitleProps {
     variant?: TitleVariantType
 }
 
-export interface TitleProps {
+export interface TitleProps extends StyledTitleProps {
     children: React.ReactNode
 }
