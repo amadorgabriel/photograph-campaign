@@ -43,12 +43,6 @@ export default class MyDocument extends Document {
       <Html lang="pt">
         <Head>
           {/* METADADOS  */}
-          <meta charSet="utf-8" />
-          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
           <meta property="og:title" content="Campanha 18 anos SENAI" />
           <meta property="og:type" content="website" />
           <meta property="og:image" content={MetaImage} />
@@ -64,8 +58,6 @@ export default class MyDocument extends Document {
             href="https://i.pinimg.com/originals/5e/c6/4e/5ec64e7fb1171180d55187326e300a77.png"
             type="image/x-icon"
           />
-
-          <title>Senai Informática</title>
         </Head>
         <body>
           <Main />
