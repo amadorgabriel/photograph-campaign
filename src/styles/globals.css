@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth !important;
+  scroll-snap-points-y: repeat(300px);
+  overflow-x: hidden;
+}
+
+  /* VARIAVEIS */
+:root {
+  --background-black: #212121;
+  --font-primary: #fff;
+  --purple-primary: #8153f1;
+  --purple-secondary: #a88bf0;
+  --pink-primary: #ed0140;
+  --pink-secondary: #ba01ea;
+}
+
+
+/* TEXT SELECTION */
+::selection {
+  color: #fff;
+  background: #ba01ea;
+}
+text::selection {
+  color: #fff;
+  background: #8153f1;
+}
+
+
+/* SROLLBAR */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  border-radius: 16px;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: var(--background-black);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:vertical {
+  height: 5px;
+  background-color: #c4c4c4;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:horizontal {
+  width: 5px;
+  background-color: #666;
+  border-radius: 3px;
+}
+
+
+/* ANIMAÇÕES ONSCROLL */
+[data-anime] {
+  opacity: 0;
+  transition: 0.3s;
+}
+[data-anime="left"] {
+  transform: translate3d(-50px, 0, 0);
+}
+[data-anime="right"] {
+  transform: translate3d(50px, 0, 0);
+}
+[data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+
+/* SUB NAVBAR */
+
+nav{
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12em 0 0;
+
+  display: none;
+  /* 
+  background-color: #212121;
+  padding: 80px ; */
+}
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 45px;
+  height: 5px;
+  background-color: gainsboro;
+  margin: 10px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-12px, 8px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-12px, -8px);
+}
+
+/* INSTITUTO */
+
+@keyframes shakePopup {
+  0% {
+    transform: rotate(5deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+
+/* FOOTER */
+footer {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 110px;
+  background-color: #212121;
+}
+footer p {
+  font-family: Archivo;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #f2f2f2c5;
+}
