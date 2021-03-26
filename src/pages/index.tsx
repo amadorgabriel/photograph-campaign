@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useCallback } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -7,20 +7,28 @@ import bannerStyles from '../styles/sections/Banner.module.css'
 
 const Home: React.FC = () => {
   const TitleSenai = useRef(null)
+  const [scrolY, setScrollY] = useState(0)
 
-  const TitleLookAtMouse = useCallback(event => {
+  const TitleLookAtMouse = (event) => {
+    setScrollY(window.scrollY)
+
     var element = TitleSenai.current
-
     var horizontalPercentage = (2 * event.clientX) / window.innerWidth + '%'
     var verticalPercentage = (2 * event.clientY) / window.innerHeight + '%'
 
     element.style.right = horizontalPercentage
     element.style.top = verticalPercentage
-  }, [])
+  }
 
   useEffect(() => {
-    window.addEventListener('mousemove', TitleLookAtMouse)
-  }, [])
+    if (scrolY <= 900) {
+      window.addEventListener('mousemove', TitleLookAtMouse)
+    } else {
+      window.addEventListener('scroll', () => setScrollY(window.scrollY))
+    }
+
+    return () => window.removeEventListener('mousemove', TitleLookAtMouse)
+  }, [scrolY, setScrollY])
 
   return (
     <div>
@@ -139,6 +147,8 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+
+      
 
       <footer>
         <p>Todos os direitos reservados - SENAI 2021</p>
