@@ -4,6 +4,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import bannerStyles from '../styles/sections/Banner.module.css'
+import campaingStyles from '../styles/sections/Campaing.module.css'
+
 
 const Home: React.FC = () => {
   const TitleSenai = useRef(null)
@@ -11,11 +13,11 @@ const Home: React.FC = () => {
 
   const TitleLookAtMouse = (event) => {
     setScrollY(window.scrollY)
-
+  
     var element = TitleSenai.current
     var horizontalPercentage = (2 * event.clientX) / window.innerWidth + '%'
     var verticalPercentage = (2 * event.clientY) / window.innerHeight + '%'
-
+  
     element.style.right = horizontalPercentage
     element.style.top = verticalPercentage
   }
@@ -26,9 +28,10 @@ const Home: React.FC = () => {
     } else {
       window.addEventListener('scroll', () => setScrollY(window.scrollY))
     }
-
+  
     return () => window.removeEventListener('mousemove', TitleLookAtMouse)
   }, [scrolY, setScrollY])
+  
 
   return (
     <div>
@@ -148,7 +151,87 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      
+      <section id={campaingStyles.campanha}>
+      <svg
+        height="30%"
+        version="1.1"
+        xmlns="//www.w3.org/2000/svg"
+        xmlnsXlink="//www.w3.org/1999/xlink"
+        width="100%"
+      >
+        <linearGradient id="MyGradient">
+          <stop offset="5%" stopColor="#ED0140" />
+          <stop offset="95%" stopColor="#BA01EA" />
+        </linearGradient>
+
+        <text className={campaingStyles.strokeText} x="10%" y="98%">A CAMPANHA</text>
+        <text className={campaingStyles.fillStrokeText} x="11%" y="92%">A CAMPANHA</text>
+      </svg>
+
+      <div className={campaingStyles.campanhaContent}>
+        <div className={campaingStyles.contentSup}>
+          <div>
+            <img
+              src="/images/filter-image.png "
+              alt="Imagem Ilustrativa"
+              className={campaingStyles.imageFilter1}
+            />
+
+            <img
+              src="/images/campanha-img-3.png"
+              alt="Imagem Ilustrativa"
+              className={campaingStyles.imageCampanha1}
+            />
+          </div>
+
+          <p>
+            O SENAI completou 18 anos e pensando nisso, nossa campanha busca
+            promover a criatividade, humanidade e conhecimento dentro da escola,
+            apresentando ao público os ambientes únicos e descontraídos, os
+            ensinamentos dentro e fora de sala de aula e as oportunidades
+            oferecidas aos alunos.
+          </p>
+        </div>
+
+        <div className={campaingStyles.contentInf} >
+          <div className={campaingStyles.infImages}>
+            <div>
+              <img
+                src="/images/filter-image.png"
+                alt="Imagem Ilustrativa"
+                className={campaingStyles.imageFilter1}
+              />
+
+              <img
+                src="/images/campanha-img-2.png"
+                alt="Imagem Ilustrativa"
+                className={campaingStyles.imageCampanha2}
+              />
+            </div>
+
+            <div>
+              <img
+                src="/images/filter-image.png"
+                alt="Imagem Ilustrativa"
+                className={campaingStyles.imageFilter1}
+              />
+
+              <img
+                src="/images/campanha-img-1.png"
+                alt="Imagem Ilustrativa"
+                className={campaingStyles.imageCampanha3}
+              />
+            </div>
+          </div>
+
+          <img
+            src="/images/white-statue.svg"
+            alt="Imagem Ilustrativa"
+            className={campaingStyles.statueImg}
+          />
+        </div>
+      </div>
+    </section>
 
       <footer>
         <p>Todos os direitos reservados - SENAI 2021</p>

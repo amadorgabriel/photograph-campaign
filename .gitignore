@@ -34,4 +34,5 @@ yarn-error.log*
 .vercel
 
 #dev draws
-global.css
+.slider.js
+.global.js

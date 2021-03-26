@@ -1,5 +1,5 @@
 #campanha {
-  background-image: url(../assets/images/bg/bg-campanha.svg);
+  background-image: url(/images/bg/bg-campanha.svg);
   background-position-x: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -10,7 +10,7 @@
   padding: 7em 0;
   width: 100%;
 }
-#campanha .fill-stroke-text {
+#campanha .fillStrokeText {
   font-family: Archivo;
   font-style: italic;
   font-weight: 700;
@@ -21,7 +21,7 @@
   stroke: url(#MyGradient);
   fill: url(#MyGradient);
 }
-#campanha .stroke-text {
+#campanha .strokeText {
   font-family: Archivo;
   font-style: italic;
   font-weight: 700;
@@ -32,7 +32,7 @@
   fill: none;
   stroke: url(#MyGradient);
 }
-.campanha-content {
+.campanhaContent {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,14 +40,14 @@
   width: 100%;
   height: 100%;
 }
-.content-sup {
+.contentSup {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   margin-right: 15em;
 }
-.content-sup p {
+.contentSup p {
   font-family: Archivo;
   font-style: normal;
   font-weight: lighter;
@@ -58,44 +58,44 @@
   color: #797979;
   margin-left: 2em;
 }
-.content-sup div {
+.contentSup div {
   position: relative;
 }
-.inf-images {
+.infImages {
   display: flex;
 }
-.content-sup > div:hover .image-campanha-1 {
+.contentSup > div:hover .imageCampanha1 {
   opacity: 1;
   transition: 0.5s ease-in;
 }
-.content-sup > div:hover .image-filter-1,
-.inf-images > div:hover .image-filter-1 {
+.contentSup > div:hover .imageFilter1,
+.infImages > div:hover .imageFilter1 {
   opacity: 0;
   transition: 0.5s ease-in;
 }
-.image-filter-1 {
+.imageFilter1 {
   width: 530px;
   height: 390px;
   transition: 0.5s ease-in;
   opacity: 1;
   position: absolute;
 }
-.image-campanha-1 {
+.imageCampanha1 {
   transition: 0.5s ease-in;
   opacity: 1;
   width: 530px;
   height: 390px;
 }
-.image-campanha-2 {
+.imageCampanha2 {
   margin-right: 2em;
 }
-.image-campanha-2,
-.image-campanha-3,
-.inf-images div img:first-child {
+.imageCampanha2,
+.imageCampanha3,
+.infImages div img:first-child {
   width: 500px;
   height: 470px;
 }
-.content-inf {
+.contentInf {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,10 +103,10 @@
   margin-top: 4em;
   width: 100%;
 }
-.content-inf > div {
+.contentInf > div {
   margin-right: 26.5em;
 }
-.statue-img {
+.statueImg {
   overflow: hidden !important;
   width: 700px;
   position: absolute;
