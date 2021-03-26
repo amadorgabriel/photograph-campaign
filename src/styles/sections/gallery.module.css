@@ -1,5 +1,5 @@
 #galeria {
-  background-image: url(../assets/images/bg/gallery-bg.png);
+  background-image: url(/images/bg/gallery-bg.png);
   background-position-x: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -10,7 +10,7 @@
   justify-content: flex-end;
   background-color: var(--background-black);
 }
-#galeria .main-title {
+#galeria .mainTitle {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -24,7 +24,7 @@
   height: 164px;
   width: 680px;
 }
-#galeria .main-title .stroke-text {
+#galeria .mainTitle .strokeText {
   font-family: Archivo;
   font-style: italic;
   font-weight: 700;
@@ -34,7 +34,7 @@
   fill: none;
   stroke: url(#MyGradient);
 }
-#galeria .main-title .fill-stroke-text {
+#galeria .mainTitle .fillStrokeText {
   font-family: Archivo;
   font-style: italic;
   font-weight: 700;
@@ -45,14 +45,14 @@
   stroke: url(#MyGradient);
   fill: url(#MyGradient);
 }
-.camera-retro {
+.cameraRetro {
   width: 315.38px;
   height: 275.5px;
   margin-right: -4em;
   margin-top: 4em;
   transform: rotate(90deg);
 }
-#galeria .main-fotos {
+#galeria .mainFotos {
   display: flex;
   margin-right: 10em;
 }
@@ -94,7 +94,7 @@
 }
 
 #making {
-  background-image: url(../assets/images/bg/making-of-bg.png);
+  background-image: url(/images/bg/making-of-bg.png);
   background-position-x: center;
   background-repeat: no-repeat;
   width: 100%;

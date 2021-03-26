@@ -7,6 +7,10 @@ import bannerStyles from '../styles/sections/Banner.module.css'
 import campaingStyles from '../styles/sections/Campaing.module.css'
 import instituteStyles from '../styles/sections/Institute.module.css'
 import coursesStyles from '../styles/sections/Courses.module.css'
+import galeryStyles from '../styles/sections/Gallery.module.css'
+import makingStyles from '../styles/sections/Making.module.css'
+import teamStyles from '../styles/sections/Team.module.css'
+import sliderStyles from '../styles/sections/Slider.module.css'
 
 const Home: React.FC = () => {
   const TitleSenai = useRef(null)
@@ -263,10 +267,9 @@ const Home: React.FC = () => {
 
               <div className={instituteStyles.searchBar}></div>
             </div>
-
             <iframe
               className={instituteStyles.videoFrame}
-              src="https://www.youtube.com/embed/bnTiyZ78SFw"
+              src="https://www.youtube.com/embed/G2So_vOfrgE"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               // frameborder="0"
               // allowfullscreen
@@ -311,10 +314,7 @@ const Home: React.FC = () => {
             </text>
           </svg>
 
-          <img
-            src="/images/bg/dotted-background.png"
-            alt="Fundo Pontilhado"
-          />
+          <img src="/images/bg/dotted-background.png" alt="Fundo Pontilhado" />
         </div>
 
         <div className={coursesStyles.cardSections}>
@@ -366,7 +366,7 @@ const Home: React.FC = () => {
             <img src="/images/post-criatividade.png" />
           </div>
 
-          <div className={coursesStyles.cardCourse} >
+          <div className={coursesStyles.cardCourse}>
             <img src="/images/post-conexao.png" />
 
             <div>
@@ -388,6 +388,339 @@ const Home: React.FC = () => {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id={galeryStyles.galeria}>
+        <div className={galeryStyles.mainTitle}>
+          <img
+            src="/images/gallery/camera-element.png "
+            alt="Camera Fotográfica Retro"
+            className={galeryStyles.cameraRetro}
+          />
+          <svg
+            version="1.1"
+            xmlns="//www.w3.org/2000/svg"
+            xmlnsXlink="//www.w3.org/1999/xlink"
+          >
+            <linearGradient id="MyGradient">
+              <stop offset="5%" stopColor="#ED0140" />
+              <stop offset="95%" stopColor="#BA01EA" />
+            </linearGradient>
+
+            <text className={galeryStyles.strokeText} x="0%" y="90%">
+              GALERIA
+            </text>
+            <text className={galeryStyles.fillStrokeText} x="2%" y="94%">
+              GALERIA
+            </text>
+          </svg>
+        </div>
+
+        <div className={galeryStyles.mainFotos}>
+          <div className={galeryStyles.filme}>
+            <img
+              src="/images/gallery/01.jpg"
+              // onclick="abrirImagem('01', 'jpg')"
+            />
+            <img
+              src="/images/gallery/02.jpg"
+              // onclick="abrirImagem('02', 'jpg')"
+            />
+            <img
+              src="/images/gallery/03.jpg"
+              // onclick="abrirImagem('03', 'jpg')"
+            />
+            <img
+              src="/images/gallery/04.jpg"
+              // onclick="abrirImagem('04', 'jpg')"
+            />
+            <img
+              src="/images/gallery/05.jpg"
+              // onclick="abrirImagem('05', 'jpg')"
+            />
+            <img
+              src="/images/gallery/06.jpg"
+              // onclick="abrirImagem('06', 'jpg')"
+            />
+            <img
+              src="/images/gallery/07.jpg"
+              // onclick="abrirImagem('07', 'jpg')"
+            />
+            <img
+              src="/images/gallery/08.png"
+              // onclick="abrirImagem('08', 'png')"
+            />
+            <img
+              src="/images/gallery/09.jpg"
+              // onclick="abrirImagem('09', 'jpg')"
+            />
+            <img
+              src="/images/gallery/10.jpg"
+              // onclick="abrirImagem('10', 'jpg')"
+            />
+            <img
+              src="/images/gallery/11.png"
+              // onclick="abrirImagem('11', 'png')"
+            />
+          </div>
+          <div className={galeryStyles.filme}>
+            <img
+              src="/images/gallery/12.png"
+              // onclick="abrirImagem('12', 'png')"
+            />
+            <img
+              src="/images/gallery/13.png"
+              // onclick="abrirImagem('13', 'png')"
+            />
+            <img
+              src="/images/gallery/14.png"
+              // onclick="abrirImagem('14', 'png')"
+            />
+            <img
+              src="/images/gallery/15.png"
+              // onclick="abrirImagem('15', 'png')"
+            />
+            <img
+              src="/images/gallery/16.png"
+              // onclick="abrirImagem('16', 'png')"
+            />
+            <img
+              src="/images/gallery/17.png"
+              // onclick="abrirImagem('17', 'png')"
+            />
+            <img
+              src="/images/gallery/18.png"
+              // onclick="abrirImagem('18', 'png')"
+            />
+            <img
+              src="/images/gallery/19.png"
+              // onclick="abrirImagem('19', 'png')"
+            />
+            <img
+              src="/images/gallery/20.png"
+              // onclick="abrirImagem('20', 'png')"
+            />
+            <img
+              src="/images/gallery/21.png"
+              // onclick="abrirImagem('21', 'png')"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id={makingStyles.making}>
+        <div className={`${instituteStyles.popup} ${makingStyles.popup}`}>
+          <div className={`${instituteStyles.topbar} ${makingStyles.topbar}`}>
+            <div className={instituteStyles.options}>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+
+            <div className={instituteStyles.searchBar}></div>
+          </div>
+
+          <iframe
+            className={instituteStyles.videoFrame}
+            src="https://www.youtube.com/embed/rEyROZw3gp8"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            // frameborder="0"
+            // allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+      <section id={teamStyles.time}>
+        <div className={teamStyles.mainTitle}>
+          <svg
+            height="30%"
+            version="1.1"
+            xmlns="//www.w3.org/2000/svg"
+            xmlnsXlink="//www.w3.org/1999/xlink"
+          >
+            <linearGradient id="MyGradient">
+              <stop offset="5%" stopColor="#ED0140" />
+              <stop offset="95%" stopColor="#BA01EA" />
+            </linearGradient>
+
+            <text className={teamStyles.strokeText} x="0%" y="90%">
+              TIME
+            </text>
+            <text className={teamStyles.fillStrokeText} x="2%" y="84%">
+              TIME
+            </text>
+          </svg>
+        </div>
+
+        <div className={`${teamStyles.slide} ${sliderStyles.hiSlide}`}>
+          <div className={sliderStyles.hiPrev}></div>
+          <div className={sliderStyles.hiNext}></div>
+          <ul>
+            <li>
+              <div className={teamStyles.card}>
+                <div
+                  className={teamStyles.textContent}
+                  style={{ backgroundColor: '#d41665' }}
+                >
+                  <div>
+                    <h2>Nicole</h2>
+                    <h2>Helen</h2>
+                  </div>
+                  <p>
+                    Olá, trabalho na área de Design Gráfico da campanha. Tenho
+                    gostos muito variados desde de literatura a música, sou uma
+                    pessoa muito envolvida e dedicada. Sempre que vou fazer
+                    alguma coisa gosto de inovar.
+                  </p>
+                </div>
+
+                <div
+                  className={teamStyles.imgContent}
+                  style={{
+                    backgroundImage:
+                      'linear-gradient(180deg, #b92c90 0%, #d41665 80.73%',
+                  }}
+                >
+                  <img
+                    src="/images/team/nicole-team.png"
+                    alt="Foto de frente integrante do time"
+                  />
+                </div>
+              </div>
+            </li>
+            <li>
+              <div className={teamStyles.card}>
+                <div
+                  className={teamStyles.textContent}
+                  style={{ backgroundColor: '#ef0039' }}
+                >
+                  <div>
+                    <h2>Suiany</h2>
+                    <h2>Racheti</h2>
+                  </div>
+                  <p>
+                    Exerço na área do Web Design e Fotografia da nossa campanha.
+                    Sou uma pessoa que gosta de trabalhar em conjunto e procuro
+                    sempre estabelecer produtividade e confiança entre os
+                    membros da equipe.
+                  </p>
+                </div>
+
+                <div
+                  className={teamStyles.imgContent}
+                  style={{
+                    backgroundImage:
+                      'linear-gradient(180deg,#d41665 0%,#ef0039 78.65%)',
+                  }}
+                >
+                  <img
+                    src="/images/team/suiany-team.png"
+                    alt="Foto de frente integrante do time"
+                  />
+                </div>
+              </div>
+            </li>
+            <li>
+              <div className={teamStyles.card}>
+                <div
+                  className={teamStyles.textContent}
+                  style={{ backgroundColor: '#8257e6' }}
+                >
+                  <div>
+                    <h2>Gabriel</h2>
+                    <h2>Amador</h2>
+                  </div>
+                  <p>
+                    Participei do web design e desenvolvimento do site da
+                    campanha. Costumo sempre imergir em novos desafios e me
+                    envolver em diferentes etapas desde o processo criativo à
+                    execução, gosto de pensar que as idéias devem sair do papel
+                    e serem transformadas em realidade.
+                  </p>
+                </div>
+
+                <div
+                  className={teamStyles.imgContent}
+                  style={{
+                    backgroundImage:
+                      'linear-gradient(180deg,rgba(186, 1, 234, 0.5) 0%,rgba(130, 87, 230, 0.5) 100%)',
+                  }}
+                >
+                  <img
+                    src="/images/team/amador-team.png"
+                    alt="Foto de frente integrante do time"
+                  />
+                </div>
+              </div>
+            </li>
+            <li>
+              <div className={teamStyles.card}>
+                <div
+                  className={teamStyles.textContent}
+                  style={{ backgroundColor: '#9e42bb' }}
+                >
+                  <div>
+                    <h2>Lucas</h2>
+                    <h2>Oliveira</h2>
+                  </div>
+                  <p>
+                    Faço parte do Web Design e Fotografia da campanha. Tenho
+                    paixão por imaginar coisas que ainda não existem, gosto de
+                    pensar como seriam e qual a proporção que elas podem tomar.
+                    Pois, eu penso que tudo que não existe pode ser criado e
+                    tudo que já existe deve ser mudado.
+                  </p>
+                </div>
+
+                <div
+                  className={teamStyles.imgContent}
+                  style={{
+                    backgroundImage:
+                      'linear-gradient(180deg,#8257e6 0%,#9e42bb 92.19%)',
+                  }}
+                >
+                  <img
+                    src="/images/team/lucas-team.png"
+                    alt="Foto de frente integrante do time"
+                  />
+                </div>
+              </div>
+            </li>
+            <li>
+              <div className={teamStyles.card}>
+                <div
+                  className={teamStyles.textContent}
+                  style={{ backgroundColor: '#892c90' }}
+                >
+                  <div>
+                    <h2>Luiza</h2>
+                    <h2>Sampaio</h2>
+                  </div>
+                  <p>
+                    Atuo na área de Design Gráfico da campanha. Sou apaixonada
+                    por todas as formas de arte e busco trazer criatividade para
+                    tudo que faço, desde as coisas mais simples até as mais
+                    complexas. Acredito que com imaginação, podemos trazer
+                    outras cores ao nosso dia-a-dia.
+                  </p>
+                </div>
+
+                <div
+                  className={teamStyles.imgContent}
+                  style={{
+                    backgroundImage:
+                      'linear-gradient(180deg,#9e42bb 0%,#b92c90 86.46%)',
+                  }}
+                >
+                  <img
+                    src="/images/team/luiza-team.png"
+                    alt="Foto de frente integrante do time"
+                  />
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
 
