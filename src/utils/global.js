@@ -1,22 +1,5 @@
-document.cookie = "promo_shown=1; Max-Age=2600000; Secure"
-
-
 // SLIDE
 $(".slide").hiSlide();
-
-// LOOK AT MOUSE
-var titleSenai = document.querySelector(".main-text"),
-  elements = [titleSenai];
-document.onmousemove = function () {
-  for (
-    var e = (2 * event.clientX) / window.innerWidth + "%",
-      t = (2 * event.clientY) / window.innerWidth + "%",
-      n = 0;
-    n < elements.length;
-    n++
-  )
-    (elements[n].style.right = e), (elements[n].style.top = t);
-};
 
 // SHAKE MOUSE
 var popup = document.querySelectorAll(".popup");
