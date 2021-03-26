@@ -1,5 +1,5 @@
 #senai {
-  background-image: url(../assets/images/bg/senai-bg.png);
+  background-image: url(/images/bg/senai-bg.png);
   background-position-x: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,7 +9,7 @@
   flex-direction: column;
   align-items: center;
 }
-#senai .main-title {
+#senai .mainTitle {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -17,7 +17,7 @@
   margin-bottom: 40px;
   margin-top: 1em;
 }
-#senai .stroke-text {
+#senai .strokeText {
   font-family: Archivo;
   font-style: italic;
   font-weight: 700;
@@ -33,13 +33,14 @@
   background: #f2f2f2;
   border-radius: 10px;
 }
-.animation-popup {
+.animationPopup {
   animation: shakePopup 0.5s linear;
 }
-.video-frame {
+.videoFrame {
   width: 930px;
   height: 548px;
   border-radius: 0 0 10px 10px;
+  border: none;
 }
 .topbar {
   width: 100%;
@@ -73,7 +74,7 @@
 .topbar .options div:first-child:hover {
   border: 1px solid #000;
 }
-.search-bar {
+.searchBar {
   width: 580px;
   height: 30px;
   margin-right: 3em;
@@ -81,13 +82,13 @@
   border: 0.75px solid #ccc;
   background: #f2f2f2;
 }
-#senai .bottom-making {
+#senai .bottomMaking {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   margin-top: 3em;
 }
-#senai .bottom-making p {
+#senai .bottomMaking p {
   font-family: Archivo;
   font-style: normal;
   font-weight: 800;
@@ -96,7 +97,7 @@
   letter-spacing: 0.1em;
   margin-right: 2em;
 }
-.btn-making {
+.btnMaking {
   color: #fff;
   font: 700 14px/60px "Droid Sans", sans-serif;
   letter-spacing: 0.05em;
@@ -108,8 +109,8 @@
   cursor: pointer;
 }
 
-.btn-making::after,
-.btn-making::before {
+.btnMaking::after,
+.btnMaking::before {
   border: 3px solid #ea0345;
   
   content: "";
@@ -122,17 +123,17 @@
   transition: transform 0.3s ease;
 }
 
-.btn-making:hover::after{
+.btnMaking:hover::after{
   transform: translate(5px, 5px);
   border-color: #ea0345;
 }
 
-.btn-making:hover::before{
+.btnMaking:hover::before{
   transform: translate(-5px, -5px);
   border-color: #ea0345;
 }
 
-#senai .purple-grid {
+#senai .purpleGrid {
   width: 100%;
   margin-top: 2em;
 }

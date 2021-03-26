@@ -5,19 +5,19 @@ import Link from 'next/link'
 
 import bannerStyles from '../styles/sections/Banner.module.css'
 import campaingStyles from '../styles/sections/Campaing.module.css'
-
+import instituteStyles from '../styles/sections/Institute.module.css'
 
 const Home: React.FC = () => {
   const TitleSenai = useRef(null)
   const [scrolY, setScrollY] = useState(0)
 
-  const TitleLookAtMouse = (event) => {
+  const TitleLookAtMouse = event => {
     setScrollY(window.scrollY)
-  
+
     var element = TitleSenai.current
     var horizontalPercentage = (2 * event.clientX) / window.innerWidth + '%'
     var verticalPercentage = (2 * event.clientY) / window.innerHeight + '%'
-  
+
     element.style.right = horizontalPercentage
     element.style.top = verticalPercentage
   }
@@ -28,10 +28,9 @@ const Home: React.FC = () => {
     } else {
       window.addEventListener('scroll', () => setScrollY(window.scrollY))
     }
-  
+
     return () => window.removeEventListener('mousemove', TitleLookAtMouse)
   }, [scrolY, setScrollY])
-  
 
   return (
     <div>
@@ -152,86 +151,143 @@ const Home: React.FC = () => {
       </section>
 
       <section id={campaingStyles.campanha}>
-      <svg
-        height="30%"
-        version="1.1"
-        xmlns="//www.w3.org/2000/svg"
-        xmlnsXlink="//www.w3.org/1999/xlink"
-        width="100%"
-      >
-        <linearGradient id="MyGradient">
-          <stop offset="5%" stopColor="#ED0140" />
-          <stop offset="95%" stopColor="#BA01EA" />
-        </linearGradient>
+        <svg
+          height="30%"
+          version="1.1"
+          xmlns="//www.w3.org/2000/svg"
+          xmlnsXlink="//www.w3.org/1999/xlink"
+          width="100%"
+        >
+          <linearGradient id="MyGradient">
+            <stop offset="5%" stopColor="#ED0140" />
+            <stop offset="95%" stopColor="#BA01EA" />
+          </linearGradient>
 
-        <text className={campaingStyles.strokeText} x="10%" y="98%">A CAMPANHA</text>
-        <text className={campaingStyles.fillStrokeText} x="11%" y="92%">A CAMPANHA</text>
-      </svg>
+          <text className={campaingStyles.strokeText} x="10%" y="98%">
+            A CAMPANHA
+          </text>
+          <text className={campaingStyles.fillStrokeText} x="11%" y="92%">
+            A CAMPANHA
+          </text>
+        </svg>
 
-      <div className={campaingStyles.campanhaContent}>
-        <div className={campaingStyles.contentSup}>
-          <div>
-            <img
-              src="/images/filter-image.png "
-              alt="Imagem Ilustrativa"
-              className={campaingStyles.imageFilter1}
-            />
-
-            <img
-              src="/images/campanha-img-3.png"
-              alt="Imagem Ilustrativa"
-              className={campaingStyles.imageCampanha1}
-            />
-          </div>
-
-          <p>
-            O SENAI completou 18 anos e pensando nisso, nossa campanha busca
-            promover a criatividade, humanidade e conhecimento dentro da escola,
-            apresentando ao público os ambientes únicos e descontraídos, os
-            ensinamentos dentro e fora de sala de aula e as oportunidades
-            oferecidas aos alunos.
-          </p>
-        </div>
-
-        <div className={campaingStyles.contentInf} >
-          <div className={campaingStyles.infImages}>
+        <div className={campaingStyles.campanhaContent}>
+          <div className={campaingStyles.contentSup}>
             <div>
               <img
-                src="/images/filter-image.png"
+                src="/images/filter-image.png "
                 alt="Imagem Ilustrativa"
                 className={campaingStyles.imageFilter1}
               />
 
               <img
-                src="/images/campanha-img-2.png"
+                src="/images/campanha-img-3.png"
                 alt="Imagem Ilustrativa"
-                className={campaingStyles.imageCampanha2}
+                className={campaingStyles.imageCampanha1}
               />
             </div>
 
-            <div>
-              <img
-                src="/images/filter-image.png"
-                alt="Imagem Ilustrativa"
-                className={campaingStyles.imageFilter1}
-              />
-
-              <img
-                src="/images/campanha-img-1.png"
-                alt="Imagem Ilustrativa"
-                className={campaingStyles.imageCampanha3}
-              />
-            </div>
+            <p>
+              O SENAI completou 18 anos e pensando nisso, nossa campanha busca
+              promover a criatividade, humanidade e conhecimento dentro da
+              escola, apresentando ao público os ambientes únicos e
+              descontraídos, os ensinamentos dentro e fora de sala de aula e as
+              oportunidades oferecidas aos alunos.
+            </p>
           </div>
 
-          <img
-            src="/images/white-statue.svg"
-            alt="Imagem Ilustrativa"
-            className={campaingStyles.statueImg}
-          />
+          <div className={campaingStyles.contentInf}>
+            <div className={campaingStyles.infImages}>
+              <div>
+                <img
+                  src="/images/filter-image.png"
+                  alt="Imagem Ilustrativa"
+                  className={campaingStyles.imageFilter1}
+                />
+
+                <img
+                  src="/images/campanha-img-2.png"
+                  alt="Imagem Ilustrativa"
+                  className={campaingStyles.imageCampanha2}
+                />
+              </div>
+
+              <div>
+                <img
+                  src="/images/filter-image.png"
+                  alt="Imagem Ilustrativa"
+                  className={campaingStyles.imageFilter1}
+                />
+
+                <img
+                  src="/images/campanha-img-1.png"
+                  alt="Imagem Ilustrativa"
+                  className={campaingStyles.imageCampanha3}
+                />
+              </div>
+            </div>
+
+            <img
+              src="/images/white-statue.svg"
+              alt="Imagem Ilustrativa"
+              className={campaingStyles.statueImg}
+            />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section id={instituteStyles.senai}>
+        <div className={instituteStyles.mainTitle}>
+          <svg
+            height="60%"
+            version="1.1"
+            xmlns="//www.w3.org/2000/svg"
+            xmlnsXlink="//www.w3.org/1999/xlink"
+            width="500px"
+          >
+            <text className={instituteStyles.strokeText} x="10%" y="95%">
+              O SENAI
+            </text>
+          </svg>
+        </div>
+
+        <div>
+          <div className={instituteStyles.popup}>
+            <div className={instituteStyles.topbar}>
+              <div className={instituteStyles.options}>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+
+              <div className={instituteStyles.searchBar}></div>
+            </div>
+
+            <iframe
+              className={instituteStyles.videoFrame}
+              src="https://www.youtube.com/embed/bnTiyZ78SFw"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              // frameborder="0"
+              // allowfullscreen
+            ></iframe>
+          </div>
+
+          <div className={instituteStyles.bottomMaking}>
+            <p>Venha saber como foi feito!</p>
+
+            <a href="#making" className={instituteStyles.btnMaking}>
+              {' '}
+              Making Of{' '}
+            </a>
+          </div>
+        </div>
+
+        <img
+          className={instituteStyles.purpleGrid}
+          src="/images/bg/purple-grid-2.png"
+          alt="Grade roxa"
+        />
+      </section>
 
       <footer>
         <p>Todos os direitos reservados - SENAI 2021</p>
