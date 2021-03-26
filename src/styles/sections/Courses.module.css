@@ -1,12 +1,12 @@
 #courses {
   width: 100%;
-  background-image: url(../assets/images/bg/bg-cursos.png);
+  background-image: url(/images/bg/bg-cursos.png);
   background-position-x: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: -400px;
 }
-#courses .main-title {
+#courses .mainTitle {
   width: 100%;
   height: 210px;
   display: flex;
@@ -16,13 +16,13 @@
   padding-top: 7em;
   position: relative;
 }
-#courses .main-title svg {
+#courses .mainTitle svg {
   background-color: #fff;
   position: absolute;
   height: auto;
   width: 680px;
 }
-#courses .main-title .stroke-text {
+#courses .mainTitle .strokeText {
   font-family: Archivo;
   font-style: italic;
   font-weight: 700;
@@ -32,7 +32,7 @@
   fill: none;
   stroke: url(#MyGradient);
 }
-#courses .main-title .fill-stroke-text {
+#courses .mainTitle .fillStrokeText {
   font-family: Archivo;
   font-style: italic;
   font-weight: 700;
@@ -43,11 +43,11 @@
   stroke: url(#MyGradient);
   fill: url(#MyGradient);
 }
-#courses .card-sections svg {
+#courses .cardSections svg {
   height: 100%;
   width: 100%;
 }
-#courses .card-sections {
+#courses .cardSections {
   margin-top: 6em;
   display: flex;
   flex-direction: column;
@@ -61,7 +61,7 @@
   width: 65%;
   margin-bottom: 4em;
 }
-#courses .card-sections .stroke-text {
+#courses .cardSections .strokeText {
   font-family: Archivo;
   font-weight: 700;
   font-size: 100px;

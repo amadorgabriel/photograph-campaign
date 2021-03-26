@@ -6,6 +6,7 @@ import Link from 'next/link'
 import bannerStyles from '../styles/sections/Banner.module.css'
 import campaingStyles from '../styles/sections/Campaing.module.css'
 import instituteStyles from '../styles/sections/Institute.module.css'
+import coursesStyles from '../styles/sections/Courses.module.css'
 
 const Home: React.FC = () => {
   const TitleSenai = useRef(null)
@@ -287,6 +288,107 @@ const Home: React.FC = () => {
           src="/images/bg/purple-grid-2.png"
           alt="Grade roxa"
         />
+      </section>
+
+      <section id={coursesStyles.courses}>
+        <div className={coursesStyles.mainTitle}>
+          <svg
+            height="30%"
+            version="1.1"
+            xmlns="//www.w3.org/2000/svg"
+            xmlnsXlink="//www.w3.org/1999/xlink"
+          >
+            <linearGradient id="MyGradient">
+              <stop offset="5%" stopColor="#ED0140" />
+              <stop offset="95%" stopColor="#BA01EA" />
+            </linearGradient>
+
+            <text className={coursesStyles.strokeText} x="0%" y="90%">
+              18 ANOS
+            </text>
+            <text className={coursesStyles.fillStrokeText} x="2%" y="84%">
+              18 ANOS
+            </text>
+          </svg>
+
+          <img
+            src="/images/bg/dotted-background.png"
+            alt="Fundo Pontilhado"
+          />
+        </div>
+
+        <div className={coursesStyles.cardSections}>
+          <div className={coursesStyles.cardCourse}>
+            <img src="/images/post-tecnologia.png" />
+
+            <div>
+              <svg
+                version="1.1"
+                xmlns="//www.w3.org/2000/svg"
+                xmlnsXlink="//www.w3.org/1999/xlink"
+              >
+                <text className={coursesStyles.strokeText} x="0%" y="80%">
+                  Tecnologia
+                </text>
+              </svg>
+
+              <p>
+                O curso técnico de Desenvolvimento de Sistemas capacita
+                profissionais para analisar requisitos de sistemas, desenvolver
+                aplicações web e mobile e testá-las. Para isso, fazemos uso de
+                diversas tecnologias como também metodologias ágeis para gestão
+                de projetos.
+              </p>
+            </div>
+          </div>
+
+          <div className={coursesStyles.cardCourse}>
+            <div>
+              <svg
+                version="1.1"
+                xmlns="//www.w3.org/2000/svg"
+                xmlnsXlink="//www.w3.org/1999/xlink"
+              >
+                <text className={coursesStyles.strokeText} x="0%" y="80%">
+                  Criatividade
+                </text>
+              </svg>
+
+              <p>
+                O curso técnico de Multimidia tem como objetivo formar
+                profissionais que saibam desenvolver produtos de design digital,
+                com conhecimentos em arquitetura da informação, edição
+                audiovisual, design de interfaces, tipografia digital e animação
+                2D, jogos digitais.
+              </p>
+            </div>
+
+            <img src="/images/post-criatividade.png" />
+          </div>
+
+          <div className={coursesStyles.cardCourse} >
+            <img src="/images/post-conexao.png" />
+
+            <div>
+              <svg
+                version="1.1"
+                xmlns="//www.w3.org/2000/svg"
+                xmlnsXlink="//www.w3.org/1999/xlink"
+              >
+                <text className={coursesStyles.strokeText} x="0%" y="80%">
+                  Conexão
+                </text>
+              </svg>
+
+              <p>
+                O curso técnico de Redes tem como objetivo formar profissionais
+                que saibam configurar e administrar serviços de redes, prover a
+                infraestrutura necessária para ambientes físicos, virtuais e
+                disponibilizados na nuvem.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <footer>
