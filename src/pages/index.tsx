@@ -18,6 +18,8 @@ const Home: React.FC = () => {
   const TitleSenaiRef = useRef(null)
   const SectionModalRef = useRef(null)
   const ImageModalRef = useRef(null)
+  const PopupRef1 = useRef(null)
+  const PopupRef2 = useRef(null)
 
   const [posScrollY, setPosScrollY] = useState(0)
   const [imageSectionVisibility, setImageSectionVisibility] = useState(false)
@@ -37,18 +39,48 @@ const Home: React.FC = () => {
   }
 
   const handleClickImage = (indexImage, formatImage) => {
-    setImageSectionVisibility(!imageSectionVisibility)
+    let imageBaseUri = ImageModalRef.current.baseURI
+    
+    setImageSectionVisibility(true)
+    SectionModalRef.current.className = ''
+    SectionModalRef.current.id = teamStyles.galeryImage
+    
+    imageBaseUri = imageBaseUri.split('#')[0] //retira todo href
+    ImageModalRef.current.src = `${imageBaseUri}images/gallery/${indexImage}.${formatImage}`
+  }
+
+  const handleShakePopup = (index) => {
+    if(index === 0){
+      PopupRef1.current.className = `${instituteStyles.popup} ${instituteStyles.animationPopup}`
+
+      setTimeout(() => {
+        PopupRef1.current.className = instituteStyles.popup
+      }, 500)
+
+    }else{
+      PopupRef2.current.className = `${instituteStyles.popup} ${makingStyles.popup} ${instituteStyles.animationPopup}`
+
+      setTimeout(() => {
+        PopupRef2.current.className =  `${instituteStyles.popup} ${makingStyles.popup}`
+      }, 500)
+    }
   }
 
   useEffect(() => {
+    //Banner section
     if (posScrollY <= 900) {
       window.addEventListener('mousemove', TitleLookAtMouse)
     } else {
       window.addEventListener('scroll', () => setPosScrollY(window.scrollY))
     }
 
+    //Galery section
+    if (imageSectionVisibility == false) {
+      SectionModalRef.current.className = teamStyles.none
+    }
+
     return () => window.removeEventListener('mousemove', TitleLookAtMouse)
-  }, [posScrollY, setPosScrollY])
+  }, [posScrollY, setPosScrollY, imageSectionVisibility])
 
   return (
     <div>
@@ -270,10 +302,10 @@ const Home: React.FC = () => {
         </div>
 
         <div>
-          <div className={instituteStyles.popup}>
+          <div ref={PopupRef1} className={instituteStyles.popup}>
             <div className={instituteStyles.topbar}>
               <div className={instituteStyles.options}>
-                <div></div>
+                <div onClick={() => handleShakePopup(0)}></div>
                 <div></div>
                 <div></div>
               </div>
@@ -292,7 +324,7 @@ const Home: React.FC = () => {
           <div className={instituteStyles.bottomMaking}>
             <p>Venha saber como foi feito!</p>
 
-            <a href="#making" className={instituteStyles.btnMaking}>
+            <a href={`#${makingStyles.making}`} className={instituteStyles.btnMaking}>
               {' '}
               Making Of{' '}
             </a>
@@ -446,7 +478,7 @@ const Home: React.FC = () => {
                   key={index}
                   src={source}
                   onClick={() => {
-                    handleClickImage(indexPhoto, formatImage)
+                    handleClickImage(imageNumber, formatImage)
                   }}
                 />
               )
@@ -472,10 +504,10 @@ const Home: React.FC = () => {
       </section>
 
       <section id={makingStyles.making}>
-        <div className={`${instituteStyles.popup} ${makingStyles.popup}`}>
+        <div ref={PopupRef2} className={`${instituteStyles.popup} ${makingStyles.popup}`}>
           <div className={`${instituteStyles.topbar} ${makingStyles.topbar}`}>
             <div className={instituteStyles.options}>
-              <div></div>
+              <div onClick={() => handleShakePopup(1)}></div>
               <div></div>
               <div></div>
             </div>
@@ -687,14 +719,14 @@ const Home: React.FC = () => {
       </section>
 
       <section
-        id="galery-image"
+        id={teamStyles.galeryImage}
         className={teamStyles.none}
         ref={SectionModalRef}
       >
         <a
-          href="#galeria"
+          href={`#${galeryStyles.galeria}`}
           onClick={() => {
-            setImageSectionVisibility(!imageSectionVisibility)
+            setImageSectionVisibility(false)
           }}
         >
           Fechar

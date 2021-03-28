@@ -113,26 +113,6 @@ nav{
   transform: rotate(45deg) translate(-12px, -8px);
 }
 
-/* INSTITUTO */
-
-@keyframes shakePopup {
-  0% {
-    transform: rotate(5deg);
-  }
-  25% {
-    transform: rotate(-5deg);
-  }
-  50% {
-    transform: rotate(5deg);
-  }
-  75% {
-    transform: rotate(-5deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
-
 
 /* FOOTER */
 footer {

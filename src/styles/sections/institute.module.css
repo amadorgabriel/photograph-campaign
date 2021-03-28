@@ -36,6 +36,23 @@
 .animationPopup {
   animation: shakePopup 0.5s linear;
 }
+@keyframes shakePopup {
+  0% {
+    transform: rotate(5deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 .videoFrame {
   width: 930px;
   height: 548px;
