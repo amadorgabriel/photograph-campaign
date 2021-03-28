@@ -3,6 +3,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import db from '../../db.json'
+
 import bannerStyles from '../styles/sections/Banner.module.css'
 import campaingStyles from '../styles/sections/Campaing.module.css'
 import instituteStyles from '../styles/sections/Institute.module.css'
@@ -13,13 +15,20 @@ import teamStyles from '../styles/sections/Team.module.css'
 import sliderStyles from '../styles/sections/Slider.module.css'
 
 const Home: React.FC = () => {
-  const TitleSenai = useRef(null)
-  const [scrolY, setScrollY] = useState(0)
+  const TitleSenaiRef = useRef(null)
+  const SectionModalRef = useRef(null)
+  const ImageModalRef = useRef(null)
+
+  const [posScrollY, setPosScrollY] = useState(0)
+  const [imageSectionVisibility, setImageSectionVisibility] = useState(false)
+
+  const imagesArr1 = db.gallery.images1
+  const imagesArr2 = db.gallery.images2
 
   const TitleLookAtMouse = event => {
-    setScrollY(window.scrollY)
+    setPosScrollY(window.scrollY)
 
-    var element = TitleSenai.current
+    var element = TitleSenaiRef.current
     var horizontalPercentage = (2 * event.clientX) / window.innerWidth + '%'
     var verticalPercentage = (2 * event.clientY) / window.innerHeight + '%'
 
@@ -27,15 +36,19 @@ const Home: React.FC = () => {
     element.style.top = verticalPercentage
   }
 
+  const handleClickImage = (indexImage, formatImage) => {
+    setImageSectionVisibility(!imageSectionVisibility)
+  }
+
   useEffect(() => {
-    if (scrolY <= 900) {
+    if (posScrollY <= 900) {
       window.addEventListener('mousemove', TitleLookAtMouse)
     } else {
-      window.addEventListener('scroll', () => setScrollY(window.scrollY))
+      window.addEventListener('scroll', () => setPosScrollY(window.scrollY))
     }
 
     return () => window.removeEventListener('mousemove', TitleLookAtMouse)
-  }, [scrolY, setScrollY])
+  }, [posScrollY, setPosScrollY])
 
   return (
     <div>
@@ -54,22 +67,22 @@ const Home: React.FC = () => {
 
           <ul>
             <li>
-              <Link href="#campanha">A CAMPANHA</Link>
+              <Link href={`#${campaingStyles.campanha}`}>A CAMPANHA</Link>
             </li>
             <li>
-              <Link href="#senai">SENAI</Link>
+              <Link href={`#${instituteStyles.senai}`}>SENAI</Link>
             </li>
             <li>
-              <Link href="#courses">18 ANOS</Link>
+              <Link href={`#${coursesStyles.courses}`}>18 ANOS</Link>
             </li>
             <li>
-              <Link href="#galeria">GALERIA</Link>
+              <Link href={`#${galeryStyles.galeria}`}>GALERIA</Link>
             </li>
             <li>
-              <Link href="#making">MAKING OF</Link>
+              <Link href={`#${makingStyles.making}`}>MAKING OF</Link>
             </li>
             <li>
-              <Link href="#time">SOBRE NÓS</Link>
+              <Link href={`#${teamStyles.time}`}>SOBRE NÓS</Link>
             </li>
           </ul>
 
@@ -79,7 +92,7 @@ const Home: React.FC = () => {
         <div className={bannerStyles.mainContainer}>
           <div
             className={bannerStyles.mainText}
-            ref={TitleSenai}
+            ref={TitleSenaiRef}
             data-tilt
             data-tilt-max="5"
             data-tilt-speed="200"
@@ -419,92 +432,41 @@ const Home: React.FC = () => {
 
         <div className={galeryStyles.mainFotos}>
           <div className={galeryStyles.filme}>
-            <img
-              src="/images/gallery/01.jpg"
-              // onclick="abrirImagem('01', 'jpg')"
-            />
-            <img
-              src="/images/gallery/02.jpg"
-              // onclick="abrirImagem('02', 'jpg')"
-            />
-            <img
-              src="/images/gallery/03.jpg"
-              // onclick="abrirImagem('03', 'jpg')"
-            />
-            <img
-              src="/images/gallery/04.jpg"
-              // onclick="abrirImagem('04', 'jpg')"
-            />
-            <img
-              src="/images/gallery/05.jpg"
-              // onclick="abrirImagem('05', 'jpg')"
-            />
-            <img
-              src="/images/gallery/06.jpg"
-              // onclick="abrirImagem('06', 'jpg')"
-            />
-            <img
-              src="/images/gallery/07.jpg"
-              // onclick="abrirImagem('07', 'jpg')"
-            />
-            <img
-              src="/images/gallery/08.png"
-              // onclick="abrirImagem('08', 'png')"
-            />
-            <img
-              src="/images/gallery/09.jpg"
-              // onclick="abrirImagem('09', 'jpg')"
-            />
-            <img
-              src="/images/gallery/10.jpg"
-              // onclick="abrirImagem('10', 'jpg')"
-            />
-            <img
-              src="/images/gallery/11.png"
-              // onclick="abrirImagem('11', 'png')"
-            />
+            {imagesArr1.map((formatImage, index) => {
+              index += 1
+              const indexPhoto = '0' + index
+              let imageNumber = index.toString()
+              imageNumber =
+                parseInt(imageNumber) <= 9 ? indexPhoto : index.toString()
+
+              const source = `/images/gallery/${imageNumber}.${formatImage}`
+
+              return (
+                <img
+                  key={index}
+                  src={source}
+                  onClick={() => {
+                    handleClickImage(indexPhoto, formatImage)
+                  }}
+                />
+              )
+            })}
           </div>
           <div className={galeryStyles.filme}>
-            <img
-              src="/images/gallery/12.png"
-              // onclick="abrirImagem('12', 'png')"
-            />
-            <img
-              src="/images/gallery/13.png"
-              // onclick="abrirImagem('13', 'png')"
-            />
-            <img
-              src="/images/gallery/14.png"
-              // onclick="abrirImagem('14', 'png')"
-            />
-            <img
-              src="/images/gallery/15.png"
-              // onclick="abrirImagem('15', 'png')"
-            />
-            <img
-              src="/images/gallery/16.png"
-              // onclick="abrirImagem('16', 'png')"
-            />
-            <img
-              src="/images/gallery/17.png"
-              // onclick="abrirImagem('17', 'png')"
-            />
-            <img
-              src="/images/gallery/18.png"
-              // onclick="abrirImagem('18', 'png')"
-            />
-            <img
-              src="/images/gallery/19.png"
-              // onclick="abrirImagem('19', 'png')"
-            />
-            <img
-              src="/images/gallery/20.png"
-              // onclick="abrirImagem('20', 'png')"
-            />
-            <img
-              src="/images/gallery/21.png"
-              // onclick="abrirImagem('21', 'png')"
-            />
+            {imagesArr2.map((formatImage, index) => {
+              index += 12
+              const source = `/images/gallery/${index.toString()}.${formatImage}`
+
+              return (
+                <img
+                  key={index}
+                  src={source}
+                  onClick={() => {
+                    handleClickImage(index, formatImage)
+                  }}
+                />
+              )
+            })}
           </div>
         </div>
       </section>
@@ -722,6 +684,23 @@ const Home: React.FC = () => {
             </li>
           </ul>
         </div>
+      </section>
+
+      <section
+        id="galery-image"
+        className={teamStyles.none}
+        ref={SectionModalRef}
+      >
+        <a
+          href="#galeria"
+          onClick={() => {
+            setImageSectionVisibility(!imageSectionVisibility)
+          }}
+        >
+          Fechar
+        </a>
+
+        <img ref={ImageModalRef} src="/images/gallery/09.jpg" />
       </section>
 
       <footer>

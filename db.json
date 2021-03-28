@@ -1,0 +1,29 @@
+{
+  "gallery": {
+    "images1": [
+      "jpg",
+      "jpg",
+      "jpg",
+      "jpg",
+      "jpg",
+      "jpg",
+      "jpg",
+      "png",
+      "jpg",
+      "jpg",
+      "png"
+    ],
+    "images2": [
+      "png",
+      "png",
+      "png",
+      "png",
+      "png",
+      "png",
+      "png",
+      "png",
+      "png",
+      "png"
+    ]
+  }
+}
