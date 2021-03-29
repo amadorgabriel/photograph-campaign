@@ -20,7 +20,7 @@
 
 
 <p align="center" > 
-  <img align="center" width="1000px" src="https://i.pinimg.com/originals/74/b3/0d/74b30dd0725f255b7ca634d105fdc0d8.png" />
+  <img align="center" width="1000px" src="https://i.pinimg.com/originals/38/3c/42/383c42b4bd9b5ec86992995705fd21d7.png" />
 </p>
 
 
@@ -30,6 +30,7 @@
 
 ## :point_right: Tabela de Conteúdos 
 - [Tabela de Conteúdos](#tabela-de-conteudo)
+- [Sobre](#sobre)
 - [Tecnologias](#tech)
 - [Pré Requisitos](#pre-requisitos)
 - [Clone o Projeto](#clonando)
@@ -43,8 +44,11 @@
 <div id="sobre" />
 
 ## :pushpin: Sobre
-Site desenvolvido para campanha **#18AnosSenaiInfo**, uma forma de homenagear a instituição expondo cada grupo de profissionais, cursos, estruturas emuito mais.
+Site desenvolvido para campanha **#Senai18**, uma forma de homenagear a instituição expondo cada grupo de profissionais, cursos, estruturas emuito mais. Uma Campanha completa promovendo envolvendo direção de filmagens, redes sociais, site entre outros, essa é **#ANossaCampanha** 
 
+<p align="center" > 
+  <img align="center" width="1000px" src="https://i.pinimg.com/originals/3e/87/68/3e87687a89672786aca2d6f2be0fb375.png" />
+</p>
 
 ---
 <div id="tech" />
