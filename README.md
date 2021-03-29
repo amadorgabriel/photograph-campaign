@@ -56,11 +56,8 @@ Site desenvolvido para campanha **#Senai18**, uma forma de homenagear a institui
 ## :rocket: Tecnologias
 - :heavy_check_mark: Aplicação Web [**NextJs**](https://reactnative.dev/);
 - :heavy_check_mark: Tipagem [**Typescript**](https://www.typescriptlang.org);
-- :heavy_check_mark: CSS-In-Js [**Styled-Components**](https://styled-components.com/);
 - :heavy_check_mark: Linter [**Eslint**](https://reactnative.dev/) with [**Airbnb**](https://github.com/airbnb/javascripto) styleguide;
 - :heavy_check_mark: Code Formatter [**Prettier**](https://prettier.io);
-- :heavy_check_mark: Image Import [**Next-Images**](https://www.npmjs.com/package/next-images);
-
 
 
 ---
