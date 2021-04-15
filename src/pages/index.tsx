@@ -95,6 +95,7 @@ const Home: React.FC = () => {
             alt="Logo Senai em preto com fundo branco"
             width="1"
             height="1"
+            priority
           />
 
           <ul>
@@ -130,7 +131,6 @@ const Home: React.FC = () => {
             data-tilt-speed="200"
             data-tilt-perspective="500"
             transform-style="preserve-3d"
-            // transform="perspective(1000px)"
           >
             <svg
               version="1.1"
@@ -161,7 +161,6 @@ const Home: React.FC = () => {
               xmlnsXlink="//www.w3.org/1999/xlink"
               width="100%"
               className={bannerStyles.infoH1}
-              // style={"margin-top: 1em"}
             >
               <text className={bannerStyles.strokeText} x="0%" y="96%">
                 INFO
@@ -179,7 +178,6 @@ const Home: React.FC = () => {
             data-tilt-speed="200"
             data-tilt-perspective="500"
             transform-style="preserve-3d"
-            // transform="perspective(1000px)"
           >
             <img
               src="./images/ping-hand.svg"
@@ -316,8 +314,6 @@ const Home: React.FC = () => {
               className={instituteStyles.videoFrame}
               src="https://www.youtube.com/embed/G2So_vOfrgE"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              // frameborder="0"
-              // allowfullscreen
             ></iframe>
           </div>
 
@@ -519,8 +515,6 @@ const Home: React.FC = () => {
             className={instituteStyles.videoFrame}
             src="https://www.youtube.com/embed/rEyROZw3gp8"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            // frameborder="0"
-            // allowfullscreen
           ></iframe>
         </div>
       </section>
