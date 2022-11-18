@@ -24,7 +24,7 @@
 </p>
 
 
----
+&nbsp;
 
 <div id="tabela-de-conteudo" />
 
@@ -39,7 +39,7 @@
 - [Licença](#licenca)
 
 
----
+&nbsp;
 
 <div id="sobre" />
 
@@ -50,7 +50,8 @@ Site desenvolvido para campanha **#Senai18**, uma forma de homenagear a institui
   <img align="center" width="1000px" src="https://i.pinimg.com/originals/3e/87/68/3e87687a89672786aca2d6f2be0fb375.png" />
 </p>
 
----
+&nbsp;
+
 <div id="tech" />
 
 ## :rocket: Tecnologias
@@ -59,15 +60,15 @@ Site desenvolvido para campanha **#Senai18**, uma forma de homenagear a institui
 - :heavy_check_mark: Linter [**Eslint**](https://reactnative.dev/) with [**Airbnb**](https://github.com/airbnb/javascripto) styleguide;
 - :heavy_check_mark: Code Formatter [**Prettier**](https://prettier.io);
 
+&nbsp;
 
----
 <div id="pre-requisitos" />
 
 ## 📦️ Pré-Requisitos
 Antes de começar você vai precisar ter instalado na sua máquina a ferramenta [Git](https://git-scm.com/downloads). 
 
 
----
+&nbsp;
 
 <div id="clonando" />
 
@@ -77,7 +78,7 @@ Antes de começar você vai precisar ter instalado na sua máquina a ferramenta 
   ❯ git clone https://github.com/amador2014/Photograph-Campaign.git
  ```
 
----
+&nbsp;
 
 <div id="run-web" />
 
@@ -109,23 +110,23 @@ Antes de começar você vai precisar ter instalado na sua máquina a ferramenta 
 <div id="gitpod" />
 
 
----
+&nbsp;
 
 ## Código Fonte
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/amador2014/Photograph-Campaign/)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/amadorgabriel/photograph-campaign/)
 
 > **Dica:** Ou então acesse a url https://github1s.com/amador2014/Photograph-Campaign
 
 
----
+&nbsp;
 
 <div id="licenca" />
 
 ## :memo: Licença
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
 
----
+&nbsp;
 
 <p align="center" > 
-  :heart: Projeto desenvolvido com :smiley: :heart:
+  Projeto desenvolvido com  💜
 </p>
